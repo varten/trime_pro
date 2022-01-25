@@ -47,7 +47,8 @@ jobs:
         run: chmod +x ./gradlew
         
       - name: Build Trime
-        run: make debug
+        run: ./gradlew assembleDebug
+        #run: make debug
         # run: make release
 
       - name: Add JNI cache
