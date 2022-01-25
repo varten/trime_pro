@@ -47,7 +47,7 @@ jobs:
         run: chmod +x ./gradlew
         
       - name: Build Trime
-        run: ./gradlew assembleDebug
+        run: ./gradlew debug
         #run: make debug
         # run: make release
 
