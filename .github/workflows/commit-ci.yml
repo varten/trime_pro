@@ -42,6 +42,10 @@ jobs:
 #        if: ${{ !steps.jni-cache.outputs.cache-hit }}
 #        run: ./script/dependency.sh
 
+
+      - name: Build prepare
+        run: chmod +x ./gradlew
+        
       - name: Build Trime
         run: make debug
         # run: make release
