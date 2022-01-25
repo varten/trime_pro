@@ -21,7 +21,7 @@ jobs:
 #          key: jni-debug-${{ steps.cache-hash.outputs.hash }}
 
       - name: Fetch submodules
-#        if: ${{ !steps.jni-cache.outputs.cache-hit }}
+        if: ${{ !steps.jni-cache.outputs.cache-hit }}
         run: |
           git submodule update --init --recursive
       - name: Setup Java
@@ -49,8 +49,8 @@ jobs:
       - name: Build prepare
         run: chmod +x ./gradlew
         
-      - name: Build with Gradle
-        run: ./gradlew build
+#      - name: Build with Gradle
+#        run: ./gradlew --warning-mode all build
 
       - name: Build Debug APK
         run: ./gradlew assembleDebug
