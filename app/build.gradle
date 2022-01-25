@@ -18,7 +18,7 @@ android {
             minifyEnabled true
         }
         debug {
-            debuggable true
+            debuggable false
         }
     }
     externalNativeBuild {
