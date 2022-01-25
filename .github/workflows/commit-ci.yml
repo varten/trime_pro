@@ -43,8 +43,11 @@ jobs:
 #        run: ./script/dependency.sh
 
 
-      - name: Build prepare
-        run: chmod +x ./gradlew
+      - name: Build with Gradle
+        run: ./gradlew build
+
+      - name: Build Debug APK
+        run: ./gradlew assembleDebug
         
       - name: Build Trime
         #run: ./gradlew tasks
